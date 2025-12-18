@@ -28,11 +28,10 @@ namespace sknco.prisongame
             if (!isLocalPlayer) return;
 
             Vector2 move = input.Move;
-            float speed = input.Sprint ? moveSpeed * sprintMultiplier : moveSpeed;
 
+            float speed = input.Sprint ? moveSpeed * sprintMultiplier : moveSpeed;
             Vector3 moveDir = transform.right * move.x + transform.forward * move.y;
 
-            
             if (controller.isGrounded)
             {
                 if (verticalVelocity < 0)
@@ -41,14 +40,13 @@ namespace sknco.prisongame
                 if (input.JumpPressed)
                     verticalVelocity = jumpForce;
             }
-            
 
             verticalVelocity += gravity * Time.deltaTime;
-            if (transform.position.y <= -.26f) verticalVelocity = 0f;
 
             Vector3 velocity = moveDir * speed + Vector3.up * verticalVelocity;
             controller.Move(velocity * Time.deltaTime);
         }
+
 
     }
 }

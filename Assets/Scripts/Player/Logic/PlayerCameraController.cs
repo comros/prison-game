@@ -46,7 +46,6 @@ namespace sknco.prisongame
 
         void OnDisable()
         {
-            
             if (look != null)
                 look.action.Disable();
         }
