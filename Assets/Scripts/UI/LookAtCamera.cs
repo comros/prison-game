@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FaceCamera : MonoBehaviour
+public class LookAtCamera : MonoBehaviour
 {
     void LateUpdate()
     {

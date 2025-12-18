@@ -4,7 +4,7 @@ using Mirror;
 namespace sknco.prisongame
 {
     [RequireComponent(typeof(CharacterController))]
-    public class PlayerMovementHandler : NetworkBehaviour
+    public class CharacterMovementController : NetworkBehaviour
     {
         [Header("Movement")]
         [SerializeField] float moveSpeed = 5f;
